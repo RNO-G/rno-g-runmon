@@ -1,0 +1,12 @@
+[Unit] 
+Description="RNO-G runmon" 
+After=postgresql.service
+
+[Service]
+User=runmon
+Group=runmon
+ExecStart=/usr/bin/python3 /home/runmon/rno-g-runmon/run.py
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
