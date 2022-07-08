@@ -64,7 +64,7 @@ def check_dir(db_conn, table_name, check_dir):
         db_conn.commit()
 
     except (Exception, psycopg2.Error) as error:
-    print("Failed to insert record into mobile table", error)
+    print("Failed to insert data", error)
 
     finally:
         if db_conn:
