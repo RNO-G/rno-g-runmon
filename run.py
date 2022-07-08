@@ -8,7 +8,7 @@ import psycopg2
 #for signal handler
 import signal 
 
-db_credentials="dbname=rno_g_runmon user=runmon password=***REMOVED***" 
+db_credentials="dbname=rno_g_runmon user=runmon" 
 
 time_to_stop = False
 
