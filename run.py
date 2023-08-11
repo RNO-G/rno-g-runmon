@@ -41,7 +41,7 @@ def check_dir(table_name, check_dir):
     #os.mkdir(check_dir+'/station'+stations[0]+'/run_abc')
     #print('Create directory: run_abc')
     for stn in stations:
-            print('===============\nStation {}'.format(stn))
+            #print('===============\nStation {}'.format(stn))
             lr = [str(x) for x  in list(pathlib.Path(check_dir+'/station'+stn+'/').glob('run*/'))]
             lrp.append(str(max(lr, key=os.path.getmtime)))
             slr = lr.copy()
@@ -49,9 +49,9 @@ def check_dir(table_name, check_dir):
             slrp.append(str(max(slr, key=os.path.getmtime)))
             #print(datetime.datetime.fromtimestamp(os.path.getmtime(max(pathlib.Path(check_dir+'/station'+stn+'/').glob('run*/'), key=os.path.getmtime))))
             tmstp.append(datetime.datetime.fromtimestamp(os.path.getmtime(max(pathlib.Path(check_dir+'/station'+stn+'/').glob('run*/'), key=os.path.getmtime))))
-            print('Last path: {}'.format(lrp))
-            print('2nd last path: {}'.format(slrp))
-    print('==================\n')
+            #print('Last path: {}'.format(lrp))
+            #print('2nd last path: {}'.format(slrp))
+    #print('==================\n')
 
 
     #os.rmdir(check_dir+'/station'+stations[0]+'/run_abc')
